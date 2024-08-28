@@ -33,7 +33,7 @@ def convert_quaternon(x: float, y: float, z: float, w: float) -> float:
 
 
 #loading the json file
-file = open('Python/General/2.json')
+file = open('Python/General/2.json') #TODO: change with respect to system setup
 data = json.load(file)
 
 #extracting all points
@@ -141,7 +141,7 @@ for i in range(total_num_of_points-1):
 
 extract = {"loc": loc}
 
-with open("Python/General/sample.json", "w") as outfile:
+with open("Python/General/sample.json", "w") as outfile: #TODO: change with respect to system setup
     json.dump(extract, outfile, indent=4)
 
 print("Extracted "+ str(total_num_of_points) + " points into sample.json")

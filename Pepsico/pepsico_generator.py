@@ -149,11 +149,11 @@ def find_perpendicular(m: float, x: float, y: float) -> tuple[float, float]:
     return m_inverse, b
 
 # loading the json files
-file = open('Python/Pepsico/depo_info.json')
+file = open('Python/Pepsico/depo_info.json') #TODO: change with respect to system setup
 data = json.load(file)
 file.close()
 
-file = open('Python/Pepsico/3.json')
+file = open('Python/Pepsico/3.json') #TODO: change with respect to system setup
 locs = json.load(file)
 file.close()
 
@@ -254,17 +254,17 @@ for p in range(len(positions)):
 # extracting json
 extract = {"loc": loc}
 
-with open("Python/Pepsico/output.json", "w") as outfile:
+with open("Python/Pepsico/output.json", "w") as outfile: #TODO: change with respect to system setup
     json.dump(extract, outfile, indent=4)
 
 # extracting excel
 df = pd.json_normalize(loc)
-excel_file = 'Python/Pepsico/output.xlsx'
+excel_file = 'Python/Pepsico/output.xlsx' #TODO: change with respect to system setup
 df.to_excel(excel_file, index=False)
 
 ############################
 # extracting txt for GeoGebra
-txt_file = open('Python/Pepsico/geoGebra.txt', 'w')
+txt_file = open('Python/Pepsico/geoGebra.txt', 'w') #TODO: change with respect to system setup
 
 # writing output for every aisle
 for i in range(aisles):
@@ -344,8 +344,6 @@ for i in range(aisles):
         # finding the line perpendicular to the lower left corner
         m, d = find_perpendicular(ms[colIdx], lb_left[0], lb_left[1])
         
-        
-
         # adding a line through the middle of the palette
         midpoint_x = lb_left[0] + h_palette/2 * math.cos(theta)
         midpoint_y = midpoint_x*ms[colIdx] + ds[colIdx]

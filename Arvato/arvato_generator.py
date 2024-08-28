@@ -36,22 +36,22 @@ def get_shelf(loc: str) -> str:
     return split_loc[2]
     
 # collecting data from user
-'''
 aisle_no = int(input("Enter the aisle number as an integer: "))
 shelf_start = int(input("Enter the starting shelf number as an integer: "))
 shelf_finish = int(input("Enter the finishing shelf number as an integer: "))
 module_no = int(input("Enter the number of modules to be divided as an integer: "))
-'''
 
 # assigning data manually for simple testing
 # TO BE REMOVED LATER
+'''
 aisle_no = 14
 shelf_start = 501
 shelf_finish = 609
 module_no = 7
+'''
 
 #loading the json file
-file = open('Python/Arvato/14.json')
+file = open('Python/Arvato/14.json') #TODO: change with respect to system setup
 data = json.load(file)
 
 #extracting all points
@@ -121,10 +121,10 @@ differences = []
 prev_loc = create_location_tag("A", aisle_no, shelf_start-1, "A")
 
 # extracting txt for GeoGebra
-txt_file = open('Python/Arvato/geoGebra.txt', 'w')
+txt_file = open('Python/Arvato/geoGebra.txt', 'w') #TODO: change with respect to system setup
 
 # taking measured data to compare
-file = open('Python/Arvato/14_complete.json')
+file = open('Python/Arvato/14_complete.json') #TODO: change with respect to system setup
 data = json.load(file)
 
 #extracting all points
@@ -192,7 +192,7 @@ current = {
 loc.append(current)
 extract = {"loc": loc}
 
-with open("Python/Arvato/output.json", "w") as outfile:
+with open("Python/Arvato/output.json", "w") as outfile: #TODO: change with respect to system setup
     json.dump(extract, outfile, indent=4)
 
 x_diff = abs(finish_x - jmespath.search("loc["+str(i)+"].position.x", data))

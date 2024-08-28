@@ -146,11 +146,11 @@ def calculate_distance(point1, point2) -> float:
     return math.sqrt((point1[0]-point2[0])**2+(point1[1]-point2[1])**2)
 
 # loading the json files
-file = open('Python/Pepsico/depo_info.json')
+file = open('Python/Pepsico/depo_info.json') #TODO: change with respect to system setup
 data = json.load(file)
 file.close()
 
-file = open('Python/Pepsico/3.json')
+file = open('Python/Pepsico/3.json') #TODO: change with respect to system setup
 locs = json.load(file)
 file.close()
 
@@ -251,17 +251,17 @@ for p in range(len(positions)):
 # extracting json
 extract = {"loc": loc}
 
-with open("Python/Pepsico/output.json", "w") as outfile:
+with open("Python/Pepsico/output.json", "w") as outfile: #TODO: change with respect to system setup
     json.dump(extract, outfile, indent=4)
 
 # extracting excel
 df = pd.json_normalize(loc)
-excel_file = 'Python/Pepsico/output.xlsx'
+excel_file = 'Python/Pepsico/output.xlsx' #TODO: change with respect to system setup
 df.to_excel(excel_file, index=False)
 
 ############################
 # extracting txt for GeoGebra
-txt_file = open('Python/Pepsico/geoGebra.txt', 'w')
+txt_file = open('Python/Pepsico/geoGebra.txt', 'w') #TODO: change with respect to system setup
 
 # writing output for every aisle
 for i in range(aisles):

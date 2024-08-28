@@ -61,20 +61,20 @@ def generate_parallel_points(start_x, start_y, final_x, final_y, palette_num, ve
         point_y = initial_point[1] + i * space * uy
         points.append((point_x, point_y))
     
-    return points, ux, uy, normal_x, normal_y
+    return points
 
 # Main function to generate points and save them to a JSON file
 def main():
 
     # Load JSON files
-    data = load_json('Python/Konya/depo_info.json')
-    locs = load_json('Python/Konya/2.json')
+    data = load_json('Python/Konya/depo_info.json') #TODO: change with respect to system setup
+    locs = load_json('Python/Konya/2.json')         #TODO: change with respect to system setup
 
     # Extracting constants from JSON
-    vertical_dist = float(jmespath.search("info[0].dimensions.vertical_dist", data))
-    buffer = float(jmespath.search("info[0].dimensions.buffer", data))
-    h_palette = float(jmespath.search("info[0].dimensions.h_palette", data))
-    palette_num = int(jmespath.search("info[0].layout.palette_num", data))
+    vertical_dist = float(jmespath.search("info[0].dimensions.vertical_dist", data))  # distance at which the robot will stop
+    buffer = float(jmespath.search("info[0].dimensions.buffer", data))                # buffer for the initial and final points
+    h_palette = float(jmespath.search("info[0].dimensions.h_palette", data))          # horizontal length of palette (cm)
+    palette_num = int(jmespath.search("info[0].layout.palette_num", data))            # number of palettes
 
     # Extracting initial and final position info from JSON
     start_x = float(jmespath.search("loc[0].position.x", locs))
@@ -88,7 +88,7 @@ def main():
     final_w = float(jmespath.search("loc[1].orientation.w", locs))
 
     # Generate the points
-    points, ux, uy, normal_x, normal_y = generate_parallel_points(start_x, start_y, final_x, final_y, palette_num, vertical_dist, buffer, h_palette)
+    points = generate_parallel_points(start_x, start_y, final_x, final_y, palette_num, vertical_dist, buffer, h_palette)
     
     # Calculate the increments for z and w
     z_inc = (final_z - start_z) / (palette_num - 1)
@@ -131,7 +131,7 @@ def main():
     extract = {"loc": loc}
 
     # Save to JSON file
-    with open("Python/Konya/output.json", "w") as outfile:
+    with open("Python/Konya/output.json", "w") as outfile: #TODO: change with respect to system setup
         json.dump(extract, outfile, indent=4)
 
     print(f"Extracted {len(points)} points successfully.")
@@ -139,7 +139,7 @@ def main():
     ############################
     
     # Extracting txt for GeoGebra
-    txt_file = open('Python/Konya/geoGebra.txt', 'w')  # TODO: Change according to system setup
+    txt_file = open('Python/Konya/geoGebra.txt', 'w')  #TODO: change with respect to system setup
 
     # Printing given points
     txt_file.write("P_start = Point("+str(start_x)+", "+str(start_y)+")\n")
