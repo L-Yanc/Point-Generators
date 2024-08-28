@@ -1,0 +1,128 @@
+##############
+# Aisle No: 1
+
+P_start_0 = Point(255,281)
+P_middle_0 = Point(611,325)
+P_final_0 = Point(967,469)
+
+P0_1 = Point(319.5091513994337, 178.97304118419967)
+P0_2 = Point(426.1973633292663, 192.15922468114528)
+P0_3 = Point(532.8855752590989, 205.34540817809088)
+P0_4 = Point(671.2571475958603, 239.3736776792243)
+P0_5 = Point(770.9131993890136, 279.68399076409537)
+P0_6 = Point(870.5692511821669, 319.9943038489663)
+
+P0_1.color = '#2b67bb'
+P0_2.color = '#2b67bb'
+P0_3.color = '#2b67bb'
+P0_4.color = '#2b67bb'
+P0_5.color = '#2b67bb'
+P0_6.color = '#2b67bb'
+
+P_start_0.color = '#2b5cbb'
+P_middle_0.color = '#2b5cbb'
+P_final_0.color = '#2b5cbb'
+
+segment_start_middle_0 = Segment(P_start_0, P_middle_0)
+segment_middle_final_0 = Segment(P_middle_0, P_final_0)
+
+print('Distance between start and middle for aisle 1: 358.70879554312575 cm')
+print('Distance between middle and final for aisle 1: 384.02083276822367 cm')
+print()
+
+##############
+# Aisle No: 2
+
+P_start_1 = Point(255,381)
+P_middle_1 = Point(611,425)
+P_final_1 = Point(967,569)
+
+P1_1 = Point(319.5091513994337, 498.97304118419964)
+P1_2 = Point(426.1973633292663, 512.1592246811452)
+P1_3 = Point(532.8855752590989, 525.3454081780909)
+P1_4 = Point(671.2571475958603, 559.3736776792243)
+P1_5 = Point(770.9131993890136, 599.6839907640954)
+P1_6 = Point(870.5692511821669, 639.9943038489664)
+
+P1_1.color = '#56cebb'
+P1_2.color = '#56cebb'
+P1_3.color = '#56cebb'
+P1_4.color = '#56cebb'
+P1_5.color = '#56cebb'
+P1_6.color = '#56cebb'
+
+P_start_1.color = '#56b8bb'
+P_middle_1.color = '#56b8bb'
+P_final_1.color = '#56b8bb'
+
+segment_start_middle_1 = Segment(P_start_1, P_middle_1)
+segment_middle_final_1 = Segment(P_middle_1, P_final_1)
+
+print('Distance between start and middle for aisle 2: 358.70879554312575 cm')
+print('Distance between middle and final for aisle 2: 384.02083276822367 cm')
+print()
+
+##############
+# Aisle No: 3
+
+P_start_2 = Point(255,581)
+P_middle_2 = Point(611,625)
+P_final_2 = Point(967,769)
+
+P2_1 = Point(319.5091513994337, 478.9730411841997)
+P2_2 = Point(426.1973633292663, 492.1592246811453)
+P2_3 = Point(532.8855752590989, 505.3454081780909)
+P2_4 = Point(671.2571475958603, 539.3736776792243)
+P2_5 = Point(770.9131993890136, 579.6839907640954)
+P2_6 = Point(870.5692511821669, 619.9943038489664)
+
+P2_1.color = '#8235bb'
+P2_2.color = '#8235bb'
+P2_3.color = '#8235bb'
+P2_4.color = '#8235bb'
+P2_5.color = '#8235bb'
+P2_6.color = '#8235bb'
+
+P_start_2.color = '#8214bb'
+P_middle_2.color = '#8214bb'
+P_final_2.color = '#8214bb'
+
+segment_start_middle_2 = Segment(P_start_2, P_middle_2)
+segment_middle_final_2 = Segment(P_middle_2, P_final_2)
+
+print('Distance between start and middle for aisle 3: 358.70879554312575 cm')
+print('Distance between middle and final for aisle 3: 384.02083276822367 cm')
+print()
+
+##############
+# Aisle No: 4
+
+P_start_3 = Point(255,681)
+P_middle_3 = Point(611,725)
+P_final_3 = Point(967,869)
+
+P3_1 = Point(319.5091513994337, 798.9730411841996)
+P3_2 = Point(426.1973633292663, 812.1592246811452)
+P3_3 = Point(532.8855752590989, 825.3454081780909)
+P3_4 = Point(671.2571475958603, 859.3736776792243)
+P3_5 = Point(770.9131993890136, 899.6839907640954)
+P3_6 = Point(870.5692511821669, 939.9943038489664)
+
+P3_1.color = '#ad9cbb'
+P3_2.color = '#ad9cbb'
+P3_3.color = '#ad9cbb'
+P3_4.color = '#ad9cbb'
+P3_5.color = '#ad9cbb'
+P3_6.color = '#ad9cbb'
+
+P_start_3.color = '#ad70bb'
+P_middle_3.color = '#ad70bb'
+P_final_3.color = '#ad70bb'
+
+segment_start_middle_3 = Segment(P_start_3, P_middle_3)
+segment_middle_final_3 = Segment(P_middle_3, P_final_3)
+
+print('Distance between start and middle for aisle 4: 358.70879554312575 cm')
+print('Distance between middle and final for aisle 4: 384.02083276822367 cm')
+print()
+

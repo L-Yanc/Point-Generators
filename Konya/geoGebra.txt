@@ -1,0 +1,14 @@
+P_start = Point(-841.0, 4041.0)
+P_final = Point(-472.0, 4084.0)
+
+P_0 = Point(-763.7046189185517, 3939.262966116199)
+P_1 = Point(-643.7677293221226, 3953.239351624726)
+P_2 = Point(-523.8308397256936, 3967.215737133253)
+
+segment = Segment(P_start, P_final)
+
+P_midpoint = Point(-656.5, 4062.5)
+
+segment_midpoint_to_P1 = Segment(P_midpoint, P_1)
+
+print('Distance_midpoint_to_P1 = 109.99999999999984 cm')

@@ -1,0 +1,7 @@
+        lb_right = [math.sqrt(h_palette*h_palette/(ms[int(col/3)]+1))+lb_left[0], 
+                    math.sqrt(h_palette*h_palette/(ms[int(col/3)]+1))*ms[int(col/3)]+lb_left[1]]
+        
+        # using the angle between the axes and the palette lines to find upper bounds
+        theta = math.atan2(lb_left[1]-lb_right[1], lb_left[0]-lb_left[0])
+        ub_left = [lb_left[0]+v_palette*math.cos(theta), lb_left[1]-v_palette*math.sin(theta)]
+        ub_right = [lb_right[0]+v_palette*math.cos(theta), lb_right[1]-v_palette*math.sin(theta)]

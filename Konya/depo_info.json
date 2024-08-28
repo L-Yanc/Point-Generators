@@ -1,0 +1,18 @@
+{
+    "info": [
+      {
+        "dimensions": {
+            "vertical_dist": -110.0,
+            "buffer": 15,
+            "min_space": 7.5,
+            "h_palette": 100.0,
+            "v_palette": 120.0,
+            "offset": 0.0
+        },
+        "layout": {
+            "palette_num": 3,
+            "start_loc": "1-L-01-01"
+        }
+      }
+    ]
+  }
